@@ -2,10 +2,43 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Website Template</title>
+	<title>Chapter 6 Haiku</title>
 	<link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
+<style>
+	body {
+		margin: 1rem;
+		background-color: black;
+		color: whitesmoke;
+		font-size: 5rem;
+		overflow: hidden;
+	}
+	.grid-container {
+		display:grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 2rem;
+		margin: 15% 4rem 0 4rem;
+	}
+	.last {
+		padding-bottom: 2rem;
+		border-bottom: 2px solid rgb(220, 200, 180)
+	}
+</style>
+<div class="grid-container">
+	<div>A</div>
+	<div>radiant</div>
+	<div class="last">young</div>
+	<div>woman</div>
+	<div>to</div>
+	<div>light</div>
+	<div>the</div>
+	<div class="last">darkest</div>
+	<div>corners</div>
+	<div>of</div>
+	<div>the</div>
+	<div class="last">winter</div>
+</div>
 
 	<h1>Website Template</h1>
 	<p>Fork and use this template repo (a.k.a. "boilerplate") for any web project</p>
