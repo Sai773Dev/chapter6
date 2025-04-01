@@ -8,12 +8,21 @@
 	body {
 		margin: 1rem;
 		background-color: black;
+		background: url("assets/img/flames.gif");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 		color: whitesmoke;
 		font-size: 5rem;
 		overflow: hidden;
 	}
+	html {
+		width: 100%;
+		height: 100%;
+	}
 	.grid-container {
 		display:grid;
+		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 		gap: 2rem;
 		margin: 15% 4rem 0 4rem;
@@ -43,7 +52,6 @@
 
 	<h1>Website Template</h1>
 	<p>Fork and use this template repo (a.k.a. "boilerplate") for any web project</p>
-	<img src="assets/img/cat.jpg" alt="" style="max-width: 32rem;">
 
 	<script src="./assets/js/main.js"></script>
 </body>
