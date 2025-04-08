@@ -8,7 +8,7 @@
 	body {
 		margin: 1rem;
 		background-color: black;
-		background: url("assets/img/flames.gif");
+		background: url("assets/img/forest-3463_512.gif");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -34,27 +34,60 @@
 		padding-bottom: 2rem;
 		border-bottom: 2px solid rgb(220, 200, 180)
 	}
+	body {
+		transition-property: transform;
+		transition-duration: 3s;
+	}
 </style>
 </head>
 
 <body>
 <div class="grid-container">
-	<div>A</div>
-	<div>radiant</div>
-	<div class="last">young</div>
-	<div>woman</div>
-	<div>to</div>
-	<div>light</div>
-	<div>the</div>
-	<div class="last">darkest</div>
-	<div>corners</div>
-	<div>of</div>
-	<div>the</div>
-	<div class="last">winter</div>
+	<div>Résumé</div>
+	<div class="last">polished</div>
+	<div>hope</div>
+	<div>rides</div>
+	<div>each</div>
+	<div>sent</div>
+	<div class="last">application</div>
+	<div>silence</div>
+	<div>answers</div>
+	<div class="last">back</div>
 </div>
+<script>
+	function randomnumber(min, max) {
+		return (Math.random()*(max-min)+min;
+	)}
 
-	<h1>Website Template</h1>
-	<p>Fork and use this template repo (a.k.a. "boilerplate") for any web project</p>
+	let divs= document.querySelectorAll(".grid-container div");
+
+	function randomize() {
+	divs.forEach(function(div)) {
+		
+		let scale = randomNumber(.5, 1.2);
+		let translateX = randomNumber (0, 50);
+		let translateY = randumNumber (0, 20);
+		let rotate = randomNumber (0, 360);
+
+		if (Math.random() > .5) {
+			scale=1;
+			translateX = randomNumber (0,80);
+			translateY = randomNumber (0,80);
+		}
+		div.style.transform = `scale(${scale}) translate(${translateX}%, ${translateY}%) rotate(${rotate}deg)`;
+	}}
+
+	let rotation=0;
+	document.addEventListener("click", function (){
+		let min=10;
+		let max=40;
+		rotation += Math.random() * (max-min) + min;
+		document.body.style.transform=`rotate(${rotation}deg)`;
+	});
+document.addEventListener("click", randomize);
+
+</script>
+<!–- document.body.style.opacity=.5; document.body.style.transform= `rotate(90deg)`;-->
 
 	<script src="./assets/js/main.js"></script>
 	
